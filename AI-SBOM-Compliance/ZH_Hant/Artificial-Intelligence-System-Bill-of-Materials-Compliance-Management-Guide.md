@@ -1,306 +1,306 @@
-# Artificial Intelligence  
-# System Bill of Materials
+# 人工智慧 
+# 系統材料清單（System Bill of Materials）
 
-## Compliance Management Guide for the Supply Chain
-### Version 1.0
-#### [Get this as a printable document](https://openchainproject.org/news/2025/10/20/welcoming-the-openchain-ai-system-bill-of-materials-compliance-guide)
+## 供應鏈相容性管理指南
+### 版本 1.0
+#### [下載可列印版本](https://openchainproject.org/news/2025/10/20/welcoming-the-openchain-ai-system-bill-of-materials-compliance-guide)
 
-# Table of Contents
+# 目錄
 
-Introduction
+前言簡介
 
-1\. Scope
+1\. 範圍
 
-2\. Terms and Definitions
+2\. 術語與定義
 
-3\. Guidance
+3\. 指南
 
-3.1 Policy
+3.1 政策（Policy）
 
-3.2 Competence
+3.2 能力（Competence）
 
-3.3 Awareness
+3.3 意識（Awareness）
 
-3.4 Program scope
+3.4 計畫範疇（Program scope）
 
-3.5 License obligations
+3.5 授權義務（License obligations）
 
-3.6 Transparency obligations
+3.6 透明性義務（Transparency obligations）
 
-3.7 Access
+3.7 存取（Access）
 
-3.8 Effectively resourced
+3.8 資源有效配置（Effectively resourced）
 
-3.9 AI content review and approval
+3.9 AI 內容檢視與核可（AI content review and approval）
 
-3.10 AI System Bill of Materials
+3.10 AI 系統材料清單（AI System Bill of Materials）
 
-3.11 Governance
+3.11 治理（Governance）
 
-# Introduction
+# 前言
 
-This guide defines the key requirements of a quality AI SBOM Compliance program. This objective is to provide a benchmark to build trust between organizations exchanging AI solutions. It is intended to help an organization consider how a program can be structured. It identifies key process points that can be included in such programs. This guide is under development and will likely see substantial changes and/or expansion before finalization.
+本指南旨在界定高品質 AI SBOM 相容性計畫所需的核心要求。其目標在於，為交換 AI 解決方案的組織之間建立信任基準，協助各方思考如何規劃並建構一套合宜的相容性管理計畫。本指南整理出可納入此類計畫中的關鍵流程節點，作為參考。值得注意的是，本指南仍在持續發展中，最終定稿前可能會有大幅度的調整與擴充。
 
-This guide focuses on the "what" and "why" aspects of a program rather than the "how" and "when". This ensures flexibility for different organizations of different sizes in different markets to choose specific policy and process content that fits their size, goals and scope.
+本指南著重於「做什麼（what）」與「為什麼（why）」，而如，無論組織規模大小、所處市場、或營運目標為何，都能保有足夠的彈性，自行選擇最適合其需求的政策與流程內容。
 
-This guide was inspired by OpenChain ISO/IEC 5230 and considered how lessons learned from that specification could be applied to market requirements around AI SBOM management in the supply chain. Other ISO/IEC standards were also taken into account in the preparation of this guide. The primary references were:
+本指南汲取自 OpenChain ISO/IEC 5230 的精神，並思考該規範的經驗如何應用在 AI SBOM 於供應鏈中的管理需求上。此外，在編撰過程中也參考了其他 ISO/IEC 標準。其中主要的參考資料如下：
 
 - ISO/IEC 5230:2020 <sup><sup>[\[1\]](#footnote-0)</sup></sup> [_https://www.iso.org/standard/81039.html_](https://www.iso.org/standard/81039.html)
 - ISO/IEC 42001:2023 [_https://www.iso.org/standard/81230.html_](https://www.iso.org/standard/81230.html)
 - ISO/IEC 5962:2021 <sup><sup>[\[2\]](#footnote-1)</sup></sup> [_https://www.iso.org/standard/81870.html_](https://www.iso.org/standard/81870.html)
 
-This guide is licensed under Creative Commons Attribution License 4.0 (CC-BY-4.0).
+這份指南以創用 CC 4.0 (CC-BY-4.0) 釋出
 
-# 1\. Scope
+# 1\. 範圍
 
-This document specifies the key requirements of managing AI compliance in the supply chain. It specifically focuses on using AI SBOM to accomplish this goal.
+本文件說明在供應鏈中管理 AI 相容性時所需的關鍵要求，並特別著重於運用 AI SBOM 來達成此一目標。
 
-# 2\. Terms and Definitions
+# 2\. 術語與定義
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as:
+本文件中使用的關鍵詞彙「必須（MUST）」、「禁止（MUST NOT）」、「必要／要求（REQUIRED）」、「應（SHALL）」、「不得（SHALL NOT）」、「應該（SHOULD）」、「不應該（SHOULD NOT）」、「建議（RECOMMENDED）」、「不建議（NOT RECOMMENDED）」、「得／可以（MAY）」、「可選的（OPTIONAL）」的解釋如下：
 
-"MUST" This word, or the terms "REQUIRED" or "SHALL", mean that the definition is an absolute requirement of the specification.
+「必須（MUST）」此字詞，或「必要／要求（REQUIRED）」或「應（SHALL）」，表示該定義是本規範中的絕對要求。
 
-"MUST NOT" This phrase, or the phrase "SHALL NOT", mean that the definition is an absolute prohibition of the specification.
+「禁止（MUST NOT）」此字詞，或「不得（SHALL NOT）」，表示該定義在本規範中屬明確禁止。
 
-"SHOULD" This word, or the adjective "RECOMMENDED", mean that there may exist valid reasons in particular circumstances to ignore a particular item, but the full implications must be understood and carefully weighed before choosing a different course.
+「應該（SHOULD）」此字詞，或「建議（RECOMMENDED）」，表示在某些特定情況下，可能存在忽略該項目的正當理由，但在採用不同做法前，必須充分理解其影響並進行謹慎評估。
 
-"SHOULD NOT" This phrase, or the phrase "NOT RECOMMENDED", mean that there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+「不應該（SHOULD NOT）」此字詞，或「不建議（NOT RECOMMENDED）」，表示在某些特定情況下，特定行為可能可接受或有其用途，但在實施此類行為前，應充分理解其影響並仔細評估。
 
-"MAY" This word, or the adjective "OPTIONAL", mean that an item is truly optional. One vendor may choose to include the item because a particular marketplace requires it or because the vendor feels that it enhances the product while another vendor may omit the same item. An implementation which does not include a particular option MUST be prepared to interoperate with another implementation which does include the option, though perhaps with reduced functionality. In the same vein an implementation which does include a particular option MUST be prepared to interoperate with another implementation which does not include the option (except, of course, for the feature the option provides.)
+「得／可以（MAY）」此字詞，或「可選的（OPTIONAL）」，表示該項目確實為選用。一個供應者可能因市場需求或產品價值而選擇納入，而另一個供應者可能選擇不納入。不包含某項選用功能的實作 必須（MUST） 能與包含該功能的實作互通（儘管功能可能受限）；同樣地，包含某項選用功能的實作亦 必須（MUST） 能與不包含該功能的實作互通（選用功能本身除外）。
 
-These definitions are originally from IETF RFC 2119: <https://www.ietf.org/rfc/rfc2119.txt> The OpenChain Project Specification Work Group reviewed the ISO definitions in 2023 to confirm no conflict: <https://www.iso.org/foreword-supplementary-information.html>
+這些定義原始取自 IETF RFC 2119：<https://www.ietf.org/rfc/rfc2119.txt> OpenChain 規範工作小組已於 2023 年檢視 ISO 的定義，以確認兩者並無衝突： <https://www.iso.org/foreword-supplementary-information.html>
 
-### 2.1 Artificial Intelligence (AI)  
+### 2.1 人工智慧（Artificial Intelligence, AI）
 
-a computer system capable of performing tasks that would previously require human intelligence
+先前需要人類智慧才能執行的任務，如今能由電腦系統完成者。
 
-### 2.2 Artificial Intelligence System Bill of Materials (AI SBOM)  
+### 2.2 人工智慧系統材料清單（Artificial Intelligence System Bill of Materials, AI SBOM）
 
-a list of components and relevant information about the components that make up part or all of an AI system
+構成 AI 系統部分或全部內容的元件清單，以及與這些元件相關的資訊。
 
-### 2.3 Artificial Intelligence System Bill of Materials Compliance (AI SBOM Compliance)  
+### 2.3 人工智慧系統材料清單合規（Artificial Intelligence System Bill of Materials Compliance, AI SBOM Compliance）
 
-a compliance activity related to AI that uses a bill of materials to support licensing, regulatory or business requirements
+一項與 AI 相關的合規活動，使用材料清單（SBOM）以支援授權、法規或商務需求。
 
-### 2.4 - compliance artifacts
+### 2.4 - 合規產物（compliance artifacts）
 
-a collection of artifacts that represent the output of a compliance program and accompany the supplied software
+代表合規計畫輸出的成果集合，並隨同所提供的軟體一併交付。
 
-### 2.5 - identified licenses
+### 2.5 - 已識別授權（identified licenses）
 
-a set of licenses identified as a result of following an appropriate method of identifying components from which the supplied software is comprised
+透過適當的元件識別方法，針對所提供軟體所組成的元件而識別出的授權集合。
 
-### 2.6 - program
+### 2.6 - 計畫（program）
 
-an organization's open source license compliance activities
+組織的開源授權合規活動。
 
-### 2.7 - program participants
+### 2.7 - 計畫參與者（program participants）
 
-any organization employee or contractor that defines, contributes to or has responsibility for preparing, reviewing or approving supplied software
+任何負責定義、貢獻、準備、審查或核准所提供軟體的組織員工或承包商。
 
-Note: Depending on the organization, that may include (but is not limited to) software developers, release engineers, quality engineers, product marketing, legal and product management.
+Note: 視組織情況而定，可能包含（但不限於）軟體開發者、發行工程師、品質工程師、產品行銷、法務與產品管理等角色。
 
-### 2.8 - supplied software
+### 2.8 - 所提供軟體（supplied software）
 
-software that an organization either provides or makes available to third parties
+組織向第三方提供或可供第三方取得的軟體。
 
-### 2.9 - verification materials
+### 2.9 - 審核資料（verification materials）
 
-materials that demonstrate that a given requirement of the specification is satisfied
+用以證明本規範中某項要求已被滿足的材料。
 
-ISO and IEC maintain terminological databases for use in standardization at the following addresses:
+ISO 與 IEC 維護標準化所需的術語資料庫如下：
 
-— ISO Online browsing platform: available at <https://www.iso.org/obp>
+— 線上瀏覽平台： <https://www.iso.org/obp>
 
-— IEC Electropedia: available at <http://www.electropedia.org/>
+— IEC Electropedia（電子詞典）： <http://www.electropedia.org/>
 
 #
 
-# 3\. Guidance<sup><sup>[\[3\]](#footnote-2)</sup></sup>
+# 3\. 指南<sup><sup>[\[3\]](#footnote-2)</sup></sup>
 
-How an organization approaches and accomplishes compliance related to AI will depend on many factors. The size of the organization, the industry it operates in, the jurisdiction where it is based and the form of AI system, service, model, data or output will all be considerations in developing a program to support the compliance goal.
+一個組織如何看待並執行與 AI 相關的合規作業，取決於多項因素，包括組織規模、所屬產業、其設立所在地所適用的司法管轄區，以及 AI 系統、服務、模型、資料或輸出的形式。這些因素都會影響組織在制定用以達成合規目標的計畫時所需的考量。
 
-Without being too prescriptive, or going into too many details, we are trying to identify some of the key process points likely to be applicable to most organizations in most industries and most jurisdictions below. This is a living document and your input is actively solicited to help us refine the content.
+本指南在不過度規範、也不深入過度細節的前提下，嘗試提出在多數組織、多數產業，以及多數司法管轄區中皆可能適用的關鍵流程節點。本文件為持續演進的活文件，我們也積極徵求各界意見，以進一步完善內容。
 
-Ideally the reader will review the process points or activities described below and be able to translate their existence and use into the development or refinement of their own compliance program related to AI.
+理想的情況下，讀者能依據以下所列的流程節點與活動，將其具體內容與運作方式轉化為設計或完善自身組織 AI 合規計畫的基礎。
 
-## 3.1 Policy
+## 3.1 政策
 
-A written policy shall exist that governs AI System Bill of Materials (AI SBOM) compliance. The policy shall be internally communicated, and informed by business strategy, legal requirements in the relevant jurisdictions, and the level of risk appropriate for the use case. <sup><sup>[\[4\]](#footnote-3)</sup></sup>
+A應制定一份書面政策，以規範 AI 系統材料清單（AI SBOM）的合規要求。該政策應在組織內部進行溝通，並以業務策略、相關司法管轄區的法律要求，以及該使用情境所需的風險程度為基礎進行制定。 <sup><sup>[\[4\]](#footnote-3)</sup></sup>
 
-### Verification material(s):
+### 審核資料：
 
-- A documented policy meeting the above requirements
-- A documented procedure that makes program participants aware of the existence of the policy (e.g. via training, internal wiki or other practical communication method)
+- 一份符合上述要求的書面政策文件
+- 一項書面化的程序，用以讓計畫參與者知悉該政策的存在（例如透過訓練、內部 Wiki 或其他實務可行的溝通方式）
 
-### Rationale:
+### 理由說明：
 
-To ensure steps are taken to create, record and make program participants aware of the existence of the policy. Although only high level requirements are provided in this section for what should additionally be included in the policy, other sections may impose specific obligations that must be included in the policy.
+為確保能採取必要步驟來建立、紀錄並讓計畫參與者知悉該政策的存在。本節僅提供政策中應額外納入內容的高層次要求；然而，其他章節可能會提出必須納入政策中的具體義務。
 
-## 3.2 Competence
+## 3.2 勝任能力
 
-The organisation shall identify the roles and the corresponding responsibilities of those roles that affect the performance and effectiveness of the program;
+組織應識別影響該計畫績效與有效性的角色，以及各角色所對應的職責；
 
-- Determine the necessary competence of program participants fulfilling each role. Program participants must have the requisite skills, knowledge, experience, and engagement with the functions below if relevant to the use case: <sup><sup>[\[5\]](#footnote-4)</sup></sup>
-  - Governance
-  - Security
-  - Safety
-  - Privacy
-  - Development
-  - Supplier management
-- Ensure that program participants are competent on the basis of appropriate education, training, and/or experience;
-- Where applicable, take actions to acquire the necessary competence; and
-- Retain appropriate documented information as evidence of competence.
+- 為履行各項角色，計畫參與者必須具備所需的技能、知識、經驗，以及在相關使用情境下對以下職能的必要投入：<sup><sup>[\[5\]](#footnote-4)</sup></sup>
+  - 治理（Governance）
+  - 安全（Security）
+  - 安全性／防護（Safety）
+  - 隱私（Privacy）
+  - 開發（Development）
+  - 供應商管理（Supplier management）
+- 確保計畫參與者具備以適當教育、訓練和／或經驗為基礎的勝任能力；
+- 在適用情況下，採取必要行動以取得所需的勝任能力；以及
+- 保存適當的文件化資訊，作為勝任能力的證據。
 
 ###
 
-### Verification material(s):
+### 審核資料：
 
-- A documented list of roles with corresponding responsibilities for the different participants in the program.
-- A document that identifies the competencies for each role.
-- Documented evidence of assessed competence for each program participant, with periodic checks to keep the list up-to-date.
+- 一份載明計畫中不同參與者角色及其對應職責的書面清單。
+- 一份識別各角色所需勝任能力的文件。
+- 各計畫參與者經評估之勝任能力的書面證據，以及為保持資訊最新所需的定期檢查紀錄。
 
-### Rationale:
+### 理由說明：
 
-To ensure the responsible people are accountable for their contributions.
+為確保負責人員對其所負責的貢獻負起相應責任。
 
-## 3.3 Awareness
+## 3.3 意識（Awareness）
 
-The organisation shall ensure that the program participants are aware of: <sup><sup>[\[6\]](#footnote-5)</sup></sup>
+組織應確保計畫參與者知悉：<sup><sup>[\[6\]](#footnote-5)</sup></sup>
 
-- The AI SBOM policy;
-- Relevant business objectives;
-- Their contribution to the effectiveness of the program; and
-- The implications of not following the Program’s requirements.
+- AI SBOM 政策；
+- 相關的業務目標；
+- 自身對計畫有效性所做的貢獻；以及
+- 未遵循計畫要求之情形所可能造成的影響。
 
-### Verification material(s):
+### 審核資料：
 
-- Documented evidence of assessed awareness for the program participants, which should include:
-  - The program’s objectives;
-  - One’s contribution within the program; and
-  - The implications of program non-conformance.
+- 計畫參與者意識評估的文件化證據，內容應包括：
+  - 計畫的目標；
+  - 個人在計畫中的貢獻；以及
+  - 未符合計畫要求時的影響。
 
-### Rationale:
+### 理由說明：
 
-- To ensure the program participants have obtained a sufficient level of awareness for their respective roles and responsibilities within the program.
+- 為確保計畫參與者已取得其在計畫中所擔任角色與職責所需的充分意識程度。
 
-## 3.4 Program scope
+## 3.4 計畫範疇（Program scope）
 
-Different programs may be governed by different levels of scope. For example, a program could govern a single product line, an entire department, or an entire organisation. The scope designation needs to be declared for each program.
+不同的計畫可能由不同層級的範疇所管理。例如，一項計畫可能僅適用於單一產品線、整個部門，或整個組織。每一項計畫都需要明確宣示其範疇界定。
 
-### Verification material(s):
+### 審核資料：
 
-- A written statement that clearly defines the scope and limits of the program.
+- 一份明確界定計畫範疇與界線的書面聲明。
 
-### Rationale:
+### 理由說明：
 
-- To provide the flexibility to construct a program that best fits the scope of an organization’s needs. Some organizations could choose to maintain a program for a specific product line while others could implement a program to govern the supplied software of the entire organization.
+- 提供足夠的彈性，使組織能夠建立最符合自身需求範疇的計畫。有些組織可能選擇僅針對特定產品線維護一套計畫，而其他組織則可能針對整個組織所供應的軟體實施全面性的計畫管理。
 
-## 3.5 License obligations
+## 3.5 授權條款義務（License obligations）
 
-A process shall exist for reviewing the relevant identified licenses for an AI system’s code, weights, and datasets (including but not limited to training, testing, and verification datasets) as well as the license for the AI system itself to determine the obligations, restrictions, and rights granted by each license, taking into account the intended use of the AI system. Note that it’s often the case that an AI system is trained on multiple other AI systems that may be identified in the AI system Model Tree for example; each of these may have their own licenses.
+應建立一項流程，用於檢視 AI 系統所使用的程式碼、權重（weights）與資料集（包含但不限於訓練、測試與驗證資料集）之相關識別授權，以及 AI 系統本身的授權條款，以判斷每一套授權所賦予的義務、限制與權利，並考量 AI 系統的預期使用方式。需注意的是，AI 系統通常是以多個其他 AI 系統為基礎進行訓練，例如可在 AI 系統的模型樹（Model Tree）中看到其來源；這些上游系統也可能各自具有不同的授權。
 
-### Verification material(s):
+### 審核資料：
 
-- A documented procedure to review and document upstream and downstream obligations, restrictions, and rights granted by each identified license, as appropriate.
+- 一項書面化程序，用於在適用情況下檢視並記錄每一套識別授權所帶來的上游與下游義務、限制與權利。
 
-### Rationale:
+### 理由說明：
 
-- To ensure a process exists for reviewing and identifying the license obligations for each identified license for the various use cases an organization may encounter (as defined in ISO/IEC 5230:2020 Section 3.3.2).
+- 為確保組織具有一項流程，用於檢視並識別各種使用情境下（依 ISO/IEC 5230:2020 第 3.3.2 節定義）所涉及之每一套識別授權的義務。
 
-## 3.6 Transparency obligations
+## 3.6 透明義務（Transparency obligations）
 
-A process shall exist for reviewing if there are any transparency obligations from regulations including but not limited to training, testing, and verification datasets, taking into account the intended use of the model.
+應建立一項流程，用於檢視是否存在源自相關法規的透明義務；此類義務可能涉及（但不限於）訓練、測試與驗證資料集，並應同時考量模型的預期使用方式。
 
-If the use case for the training data creates a relevant issue (e.g., disclosure obligations to downstream recipients) in the context of transparency, then appropriate risk mitigation measures should be undertaken. <sup><sup>[\[7\]](#footnote-6)</sup></sup>
+若訓練資料在透明性脈絡下產生相關議題（例如需向下游接收者揭露之義務），則應採取適當的風險降低措施。<sup><sup>[\[7\]](#footnote-6)</sup></sup>
 
-### Verification material(s):
+### 審核資料：
 
-- A documented procedure to review and document the transparency measures undertaken.
+- 一項書面化程序，用於檢視並記錄所採取的透明措施。
 
-### Rationale:
+### 理由說明：
 
-- To ensure that an organization is aware of the latest transparency obligations set out by regulators.
+- 為確保組織能掌握由監管機關所制定的最新透明義務。
 
-## 3.7 Access
+## 3.7 存取（Access）
 
-Maintain a process to effectively respond to external AI SBOM Compliance inquiries. Publicly identify a means by which a third party can make an AI SBOM Compliance inquiry.
+應維護一項流程，以有效回應外部的 AI SBOM 合規查詢。並應公開標示第三方可如何提出 AI SBOM 合規查詢的方式。
 
-### Verification material(s):
+### 審核資料：
 
-- Publicly visible method that allows any interested parties to make an AI SBOM Compliance inquiry (e.g., via a published contact email address). An internal documented procedure for responding to third-party AI SBOM Compliance inquiries. <sup><sup>[\[8\]](#footnote-7)</sup></sup>
+- 一個公開可見的方法，使任何利害關係人都能提出 AI SBOM 合規查詢（例如公開的聯絡電子郵件）。 一項內部書面化程序，用於回應第三方的 AI SBOM 合規查詢。<sup><sup>[\[8\]](#footnote-7)</sup></sup>
 
-### Rationale:
+### 理由說明：
 
-- To ensure there is a reasonable way for third parties to contact the organization with regard to compliance inquiries and that the organization is prepared to effectively respond.
+- 為確保第三方能以合理方式聯繫組織提出合規查詢，且組織已準備好有效回應。
 
-## 3.8 Effectively resourced
+## 3.8 足夠資源配置（Effectively resourced）
 
-- Identify and Resource Program Task(s):
-  - Assign accountability to ensure the successful execution of program tasks.
-- Program tasks are sufficiently resourced:
-  - Time to perform the tasks have been allocated; and
-  - Adequate funding has been allocated.
-- A process exists for reviewing and updating the policy and supporting tasks;
-- Legal expertise pertaining to AI SBOM Compliance is accessible to those who may need such guidance; and
-- A process exists for the resolution of AI SBOM Compliance issues.
+- 識別並配置計畫任務：
+  - 指派責任歸屬，以確保計畫任務得以成功執行。
+- 計畫任務具備充足資源：
+  - 已分配執行任務所需的時間；以及
+  - 已分配足夠的資金。
+- 存在一項流程，用於檢視並更新政策及其支援任務；
+- 與 AI SBOM 合規相關的法律專業知識，應可供需要指導的人取得；以及
+- 存在一項流程，用於處理 AI SBOM 合規議題的解決。
 
-### Verification material(s):
+### 審核資料：
 
-- Document with name of persons, group or function in program role(s) identified.
-- The identified program roles have been properly staffed and adequate funding provided.
-- Identification of expertise available to address AI SBOM Compliance matters which could be internal or external.
-- A documented procedure that assigns internal responsibilities for AI SBOM Compliance.
-- A documented procedure for handling the review and remediation of non-compliant cases.
-- See, e.g., Sections B.4.2 and B.4.6 of Annex B of ISO/IEC 42001. Section B.9.3 from the same Annex also provides guidance to determine if human resources for human oversight should be incorporated.
+- 一份文件，載明計畫角色所對應的人員、群組或職能。
+- 所識別的計畫角色已有適當的人力配置，並已提供足夠的資金。
+- 識別可用的專業知識（內部或外部皆可），以處理 AI SBOM 合規事項。
+- 一項書面化程序，用於指派 AI SBOM 合規的內部責任。
+- 一項書面化程序，用於處理不符規案例的檢視與補救。
+- 參考 ISO/IEC 42001 附錄 B 的 B.4.2 與 B.4.6 節；同一附錄的 B.9.3 節亦提供判斷是否需納入人力監督（human oversight）資源的指引。
 
-### Rationale:
+### 理由說明：
 
-- To ensure: i) program responsibilities are effectively supported and resourced and ii) policies and supporting processes are regularly updated to accommodate changes in AI SBOM Compliance best practices.
+- 確保：i) 計畫責任能獲得有效支持與資源；ii) 政策與其支援流程能定期更新，以因應 AI SBOM 相容性最佳實務的演進。
 
-## 3.9 AI System Bill of Materials
+## AI 系統材料清單（AI System Bill of Materials）
 
-A process shall exist for creating and managing an AI SBOM, this can be in any format e.g. SPDX, CycloneDX, or another format. The AI SBOM shall account for inbound materials from third-parties.
+應建立一套流程，用於建立與管理 AI SBOM；其格式可自由選擇，例如 SPDX、CycloneDX，或其他適當格式。
 
-### Verification material(s):
+### 審核資料：
 
-- A documented procedure for identifying, tracking, reviewing, approving, and archiving information related to the components of an AI system (e.g., model, datasets, etc).
-- Records for the supplied system that demonstrates the documented procedure was properly followed.
+- 一份文件化程序，用以識別、追蹤、檢視、核准並保存與 AI 系統元件（例如模型、資料集等）相關的資訊。
+- 可證明上述程序已正確執行的系統紀錄。
 
-### Rationale:
+### 理由說明：
 
-- To ensure a process exists for creating and managing an AI SBOM used to construct the supplied system. A bill of materials is needed to support the systematic review and approval of the system to understand the obligations and restrictions
+- 確保組織擁有建立與管理 AI SBOM 的流程，而該 SBOM 被用來構成所提供的系統。A系統材料清單是進行系統性審查與核准的基礎，以便理解各項義務與限制。
 
 ## 3.10 Governance
 
-An organization shall have a governance framework for AI, policies, and practices to help ensure that AI systems are developed, deployed, and managed responsibly. Governance emphasizes compliance with emerging AI laws and regulations, such as the EU AI Act, Hiroshima AI process or Global AI Governance Initiative (China), and addresses ethical considerations, risk management, and transparency. For example, understand the risks associated with ongoing use of AI Systems and training data in the context of their intended Programs. This could include the ability to monitor the lifecycle of the AI system and perform ongoing analysis of its intended uses. <sup><sup>[\[9\]](#footnote-8)</sup></sup>
+組織應建立 AI 的治理架構，包括政策與實務流程，以確保 AI 系統得以負責任地開發、部署與管理。治理強調遵循新興的 AI 法規，例如 EU AI Act、廣島人工智慧進程（Hiroshima AI Process）、或全球 AI 治理倡議（中國提出）。此外，治理亦需處理倫理考量、風險管理與透明性等議題。例如：理解 AI 系統與訓練資料在預期計畫中的持續使用風險。這也可能包括：監測 AI 系統全生命週期的能力，並持續分析其預期用途。<sup><sup>[\[9\]](#footnote-8)</sup></sup>
 
-### Verification material(s):
+### 審核資料：
 
-- A documented AI governance framework for the lifecycle of an AI system with a process to review the framework periodically.
+- 一份 AI 系統生命週期的治理框架文件，並具備定期檢視該框架的流程。
 
-### Rationale:
+### 理由說明：
 
-- To ensure a process exists for maintaining an AI framework for the lifecycle of the AI system. A framework is needed to support the periodic review of the AI system.
+- 確保組織擁有可維持 AI 系統全生命週期治理的流程，而該治理框架能支援定期檢視 AI 系統。
 
-## Footnotes
+## 註解（Footnotes）
 
-1. OpenChain Project version: [_OpenChain ISO/IEC 5230 - License Compliance_](https://openchainproject.org/license-compliance) is functionally identical and freely available [↑](#footnote-ref-0)
+1. OpenChain 計劃版本 [_OpenChain ISO/IEC 5230 - 授權合規_](https://openchainproject.org/license-compliance) 授權相容性之功能與此版本一致，且可自由取得 [↑](#footnote-ref-0)
 
-2. SPDX Project version:  
-    [_https://spdx.dev/wp-content/uploads/sites/31/2023/09/SPDX-specification-2-2.pdf_](https://spdx.dev/wp-content/uploads/sites/31/2023/09/SPDX-specification-2-2.pdf) is functionally identical and freely available [↑](#footnote-ref-1)
+2. SPDX 計劃版本：
+    [_https://spdx.dev/wp-content/uploads/sites/31/2023/09/SPDX-specification-2-2.pdf_](https://spdx.dev/wp-content/uploads/sites/31/2023/09/SPDX-specification-2-2.pdf) 同樣功能一致且可自由取得。 [↑](#footnote-ref-1)
 
-3. In a specification, this section may be called “Requirements,” but given that this is a guide an explicit term is used to ensure understanding that the items below are recommended, not prescriptive. [↑](#footnote-ref-2)
+3. 在正式規範中，本節可能被稱為「要求（Requirements）」，但由於本文件為指南，因此在此使用較明確的名稱，避免誤解為強制性要求。 [↑](#footnote-ref-2)
 
-4. See, e.g., Section B.2.2., Annex B of ISO/IEC 42001. [↑](#footnote-ref-3)
+4. 參考 ISO/IEC 42001，附錄 B（Annex B），第 B.2.2 節。 [↑](#footnote-ref-3)
 
-5. See, e.g., Section B.3., Annex B of ISO/IEC 42001. [↑](#footnote-ref-4)
+5. 參考 ISO/IEC 42001，附錄 B，第 B.3 節。 [↑](#footnote-ref-4)
 
-6. See, e.g., Section 7.3 of ISO/IEC 42001. [↑](#footnote-ref-5)
+6. 參考 ISO/IEC 42001，第 7.3 節。 [↑](#footnote-ref-5)
 
-7. See, e.g., Sections B.5.3, B.6.2.3, B.6.2.7, and B.7 of Annex B of ISO/IEC 42001. [↑](#footnote-ref-6)
+7. 參考 ISO/IEC 42001，附錄 B 的 B.5.3、B.6.2.3、B.6.2.7 與 B.7。 [↑](#footnote-ref-6)
 
-8. See, e.g., Section B.8.5 of Annex B of ISO/IEC 42001. [↑](#footnote-ref-7)
+8. 參考 ISO/IEC 42001，附錄 B 的 B.8.5。 [↑](#footnote-ref-7)
 
-9. See, e.g., Section B.6.2 of Annex B of ISO/IEC 42001 [↑](#footnote-ref-8)
+9. 參考 ISO/IEC 42001，附錄 B 的 B.6.2。 [↑](#footnote-ref-8)
